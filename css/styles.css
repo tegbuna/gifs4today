@@ -1,0 +1,38 @@
+* {}
+
+body {}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+#header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: baseline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+    
+}
+
+#title {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    font-family: 'Reggae One', cursive;
+}
+
+#columns {}
+
+#gifs {
+    display: flex;
+    justify-content: space-around;
+    align-items:stretch;
+}
+
+.gifs {}
+
+#form {}
+
+#trending {}
