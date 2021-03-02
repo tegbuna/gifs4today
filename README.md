@@ -8,7 +8,7 @@ This is an app that will allow users to view a list of the current, most popular
 
 **Technologies:**
 
-* **GIPHY API**: www.api.giphy.com
+* **GIPHY API**: [GIPHY] (http://api.giphy.com)
 * **JavaScript**
 * ***HTML 5**
 * **CSS**
@@ -24,9 +24,9 @@ This is an app that will allow users to view a list of the current, most popular
 
 **Wireframes:**
 
-**Personal Sketch**:  https//:imgur.com/#
+**Personal Sketch**:  [Imgur](https://i.imgur.com/LiYDGxF.jpg)
 
-**History of GIFs**: https://en.wikipedia.org/wiki/GIF
+**History of GIFs**: [Wikepedia()]https://en.wikipedia.org/wiki/GIF)
 ___
 
 

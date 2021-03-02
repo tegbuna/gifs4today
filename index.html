@@ -8,6 +8,16 @@
     <script defer src="./js/script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Flamenco:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
     
 
@@ -16,18 +26,35 @@
 <body class="container">
 
     <header id="header">
-        <h1 id="title">Gifs|4|Today</h1> <br>
-        <h3>Your source for today's top 10 GIFs</h3>
+        <h1 id="title">Gifs|4|Today </h1> 
+
+       <h3>Your source for today's top 10 GIFs</h3>
+    
     </header>
     <br>
-    <div id="columns">
+    <ul id="columns">
+        <p class="section"> TRENDING NOW</p><br>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
+        <P id="toptrends"></P>
 
-
-    </div>
+    </ul>
 
     <br> <hr>
 
     <div id="gifs">
+        <p class="section">TOP 10 GIFs TODAY <div DATE=""></div></p
+            ><br>
+        <ul>
         <img class="gif"src="#" alt="10">
             <p>10</p>
         <img class="gif"src="#" alt="09">
@@ -48,17 +75,18 @@
             <p>02</p>
         <img class="gif"src="#" alt=" 01">
             <p>01</p>
+        </ul>
     </div>
+
 
     <br><hr>
 
     <div id="form">
-        <h3>Search GIPHY.com</h3>
-       <br>
-        
-       <input type="search" name= "Search Bar" id="trending" value="Keyword(s)">
-        
-       <input type="submit" value="Submit">
+        <form class="zipform">
+            <input type="text" class="searchtext">
+            <button type="submit" class="searchbtn"> Search for GIFs </button>
+            <input type="reset" value="Reset">
+        </form>
     </div>
 
 </body>
