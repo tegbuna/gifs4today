@@ -5,3 +5,8 @@
 .new-link active {
     font-size: smaller;
 }
+
+ .giflist {
+     max-width: 300px;
+     hmax-height:300px;
+ }
