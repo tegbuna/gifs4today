@@ -9,7 +9,9 @@ This is an app that will allow users to view a list of the current, most popular
 **Technologies:**
 
 * **GIPHY API**: [GIPHY] (http://api.giphy.com)
-* **JavaScript**
+* **GitHub**
+* **AJAX* 
+**JavaScript**
 * ***HTML 5**
 * **CSS**
 * **jQuery**
@@ -19,7 +21,9 @@ This is an app that will allow users to view a list of the current, most popular
 
 * **Top Trends** - Populates a list of current popular key-terms being searched.
 * **Top 10 Gifs** - Populates the top 10 GIFs of the current day.  User's can click on a GIF of their choice to view a larger image of it.
-* **Search GIPHY.com** - Users can search the library of GIFs located on the GIPHY.com website using key-terms of their choice.
+* **Search GIPHY.com** - *As of right now, this fuction is being worked on so it's currently unavailable.* Shortly users will be able to search the library of GIFs located on the GIPHY.com website using key-terms of their choice.
+
+**Live Site**: [Vercel] (https://gifs4today.vercel.app/)
 
 **GitHub Repository**: [Gifs4Today] (https://github.com/tegbuna/gifs4today)
 

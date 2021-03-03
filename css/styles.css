@@ -8,5 +8,11 @@
 
  .giflist {
      max-width: 300px;
-     hmax-height:300px;
+     max-height:300px;
+ }
+
+ .col-lg-4 {
+     align-items: center;
+     justify-content: space-around;
+     
  }
