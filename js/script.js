@@ -50,15 +50,16 @@
 //   });
 //   });
 
-//Get Popular Search Key Terms List:    
-function formatList(jsonObject) {
-    let  keyTerm = jsonObject.data;
-
-$.ajax({
+//Get Popular Search Key Terms List:
+function formatList(data) {
+    $.ajax({
     
         url: "http://api.giphy.com/v1/gifs/search?q="  +  "&api_key=ca1ep15FwAhmLD1t2cAUus1ubyOp2IsS&limit=18",
         type: "GET",
-        success: function (data) {
-                $('.col-lg-4').text(`<p> ${keyTerm} </p>`);
-            }        
-        });
+         function (data) {
+                $('.col-lg-4p').text(`<p> ${data.data[0]} </p>`);
+            }, (error) => {
+              console.log('bad request: ', error);
+            }); 
+        })
+    };
