@@ -2,6 +2,30 @@
     font-family: 'Reggae One', cursive;
 }
 
+.modal {
+    display: none;
+    padding: 30px;
+    margin-top: 100px;
+    margin-left: 25px;
+    height: 280px;
+    max-width: 480px;
+    background: #808080;
+    border: 1px solid #ffffff;
+    color: #000000;
+    opacity: 0.8;
+}
+
+#close {
+    padding: 2px;
+    position: absolute;
+    top:5px;
+    right: 4px;
+    height: 20px;
+    background: #ff0000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .new-link active {
     font-size: smaller;
 }
@@ -11,8 +35,19 @@
      max-height:300px;
  }
 
+ h3 {
+     text-align: center;
+     padding-bottom: 10px;
+     color: gray
+ }
+
+
  .col-lg-4 {
-     align-items: center;
-     justify-content: space-around;
+     text-transform: capitalize;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1 fr;
+     justify-content: center;
+     align-content: center;
      
  }
+

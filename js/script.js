@@ -1,6 +1,8 @@
 
 
 
+
+/*----- API KEYS -----*/
 // BASE_URL w/ Top 10 Endpoint: 'https://api.giphy.com/v1/gifs/trending?api_key=qb1xRZmU2B2eMGsiO78pCPnk1XOM0Rgx&limit=10'
 // Top Ten Key: qb1xRZmU2B2eMGsiO78pCPnk1XOM0Rgx
 
@@ -11,8 +13,8 @@
 //Search Key: TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0
 
 
-
 /*----- FUNCTIONS -----*/
+
 //Get Popular Search Key Terms List:
 $(document).ready(formatList);
 function formatList(e) {
@@ -51,21 +53,13 @@ function formatList(e) {
         $('#gif2').attr('src', data2.data[8].images.original.url);
         $('#gif1').attr('src', data2.data[9].images.original.url);
     })
-}
 
 //For Search Items (needs modal):
-// $('.btn-outline-success').click(function(e) { 
-//   e.preventDefault()
-//       console.log("The button was clicked.")
-  
-//   $.ajax({
-  
-//       url: "http://api.giphy.com/v1/gifs/search?q=" + $('.form-control me-2').val() +  "&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0",
-//       type: "GET",
-//       success: function(data) {
-//           console.log("This works too")
-//           debugger
-//           console.log(response.data[0].bitly_url);
-//       }
-//   });
-//   });
+    
+    $.ajax('https://api.giphy.com/v1/gifs/search?api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0').then (function(data3){
+        $('.btn btn-outline-success').click(function() { 
+            $('.modal').css('display', 'block');
+            $('.modal').attr('src', data3.data[0]);
+        })
+    })
+}
