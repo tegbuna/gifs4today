@@ -57,16 +57,32 @@ function formatList(e) {
 
 //For Search Items (needs modal):
 
-    
-    $.ajax('https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0').then (function(data3){
+/*----- CONSTANTS -----*/ 
+          const api = 'https://api.giphy.com/v1/gifs/search?q=';
+          const key = '&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0';
+          const userInput = $('.form-control me-2');
+          //const limit = '&limit=5';
 
-        //Event Listener:
+         // Create new variable called queryURL which pieces together all of the above variables. 
+          const queryURL = api + userInput + key;
+
+           //Use AJAX to call GIPHY API:
+          $.ajax({url: queryURL, method: 'GET'}).then(function(data3){
+
+
+        // For simplicity, we will take the first gif (ie. at postion 0)
+            const giphyURL = data3.data[0].images.original.url;
+           
+
+        // Plug image into modal.
+            /*----- EVENT LISTENERS -----*/
         $('.btn-outline-success').click(function() {         
             $('.bg-modal').css('display', 'flex');
-            $('#mdal-gif').attr('src', data3.data[0]);
+            $('#mdal-gif').attr('src', giphyURL);
         });
+        
         $('.close').click(function() {
-            $('.bigmodal').css('dislay', 'none')
-        })
-    })
-}
+            $('.bigm-odal').css('display', 'none')      
+        });
+    });
+    }
