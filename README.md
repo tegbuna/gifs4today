@@ -4,11 +4,11 @@ ___
 ___
 
 **Description:**
-This is an app that will allow users to view a list of the current, most popular GIFs being searched, see the top 10 GIFs of the current day and search the GIPHY.com website for GIFs related to key search terms they provide. 
+This is an app that will allow users to view a list of the current, most popular GIFs being searched, see the top 10 most viewed GIFs in real time and search for for GIFs related to key-words they provide. 
 
 **Technologies:**
 
-* **GIPHY API**: [GIPHY] (http://api.giphy.com)
+* **GIPHY API**
 * **GitHub**
 * **AJAX**
 **JavaScript**
@@ -22,17 +22,22 @@ This is an app that will allow users to view a list of the current, most popular
 
 **Features:** 
 
-* **Top Trends** - Populates a list of current popular key-terms being searched.
-* **Top 10 Gifs** - Populates the top 10 GIFs of the current day.  User's can click on a GIF of their choice to view a larger image of it.
-* **Search GIPHY.com** - *As of right now, this fuction is being worked on so it's currently unavailable.* Shortly users will be able to search the library of GIFs located on the GIPHY.com website using key-terms of their choice.
+* **Top Trends** - Populates a list of current popular key-words being searched. In the future, each key-term will be an active link that will allow users to search using their selection.
+* **Top 10 Gifs** - Displays the most popularly viewed GIFs of the moment counting down from 10 to 1.  
+* **Search GIPHY.com** - *As of right now, this fuction is being worked on so it's currently unavailable.* In the future, users will be able to search the library of GIFs hosted by the Giphy API using key-words of their choice.
 
-**Live Site**: [Vercel] (https://gifs4today.vercel.app/)
+**LINKS:**
 
-**GitHub Repository**: [Gifs4Today] (https://github.com/tegbuna/gifs4today)
+* **Live Site**: Vercel | https://gifs4today.vercel.app/
 
-**Wireframe:** [Imgur](https://i.imgur.com/LiYDGxF.jpg)
+* **GitHub Repository**: Gifs4Today | https://github.com/tegbuna/gifs4today
 
-**History of GIFs**: [Wikepedia()]https://en.wikipedia.org/wiki/GIF)
+* **GIPHY** |  http://api.giphy.com
+
+* **Wireframe:** Imgur | https://i.imgur.com/LiYDGxF.jpg (*Additional changes made after initial wireframe was drafted.)
+
+* **History of GIFs**: | Wikepedia https://en.wikipedia.org/wiki/GIF
+
 ___
 
 
