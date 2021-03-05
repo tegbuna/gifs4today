@@ -11,6 +11,7 @@
 
 //BASE_URL3 w/ Search Endpoint: 'https://api.giphy.com/v1/gifs/search?api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0'
 //Search Key: TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0
+// q : q=ryan+gosling
 
 
 /*----- FUNCTIONS -----*/
@@ -55,11 +56,17 @@ function formatList(e) {
     })
 
 //For Search Items (needs modal):
+
     
-    $.ajax('https://api.giphy.com/v1/gifs/search?api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0').then (function(data3){
-        $('.btn btn-outline-success').click(function() { 
-            $('.modal').css('display', 'block');
-            $('.modal').attr('src', data3.data[0]);
+    $.ajax('https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0').then (function(data3){
+
+        //Event Listener:
+        $('.btn-outline-success').click(function() {         
+            $('.bg-modal').css('display', 'flex');
+            $('#mdal-gif').attr('src', data3.data[0]);
+        });
+        $('.close').click(function() {
+            $('.bigmodal').css('dislay', 'none')
         })
     })
 }

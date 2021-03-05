@@ -10,10 +10,13 @@ This is an app that will allow users to view a list of the current, most popular
 
 * **GIPHY API**: [GIPHY] (http://api.giphy.com)
 * **GitHub**
-* **AJAX* 
+* **AJAX**
 **JavaScript**
 * ***HTML 5**
 * **CSS**
+* **FLEX BOX**
+* **CSS GRID**
+* **BOOTSTRAP**
 * **jQuery**
 
 

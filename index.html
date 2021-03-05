@@ -39,10 +39,19 @@
 
 <body>
     <header>
+           <!-- Modal Section  -->
+           <div class="bg-modal">
+            <div class="modal-content"> 
+                <div class="close">+</div>
+                <img id="modal-gif" class="imgsrch" src="#" alt="GIF">
+            </div>
+           
+        </div>
+
         <!-- Nav Bar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-                <a class="navbar-brand" href="#">GIFS|4|Today</a>
+                <a class="navbar-brand" href="#">GIFS|4|Today</a> 
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,26 +61,27 @@
                 
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                        <a class="nav-link inactive" aria-current="page" href="#">Your source for the top 10 GIFs of the day!</a>
+                        <a class="nav-link inactive" aria-current="page" href="#"></a>
                         </li>
                     </ul>
-                    
-                <!-- Search Bar -->
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                        <div class="modal">
-                            <div id="close">X</div>
-                            <img id="modalgif" class="imgsrch" src="#" alt="GIF">
-                        </div>
-                    </form>
-                    
 
-                    </div>>            
+                <!-- Search Bar -->
+                    
+                <form class="d-flex">
+                        
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                       
+                        <button class="btn-outline-success" type="submit">Search</button>
+                    
+                    </form>
+                    <br>
+                    <img id="giphy-logo" src="./images/Static Logos/Small/Dark Backgrounds/PoweredBy_200px-Black_HorizText.png" alt="Giphy Logo">
+                              
                 </div>
         </div>
         </nav>
-    </header>
+    </header> 
+    <br>
     
     <main>
         <!-- carousel -->
@@ -91,7 +101,7 @@
                 <div class="carousel-caption text-start">
                 <h1>Trending Now</h1>
                 <p>Check out this list of the most popular trending GIFs.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Trending Now</a></p>
+                <p><a class="btn btn-lg btn-primary" href="#">See "Keyword" Trends </a></p>
                 </div>
             </div>
             </div>
@@ -128,15 +138,18 @@
         </button>
         </div>
     
+    
 
-        <!-- TOP 10 GIFS OF THE DAY START HERE
+        <!-- TRENDING NOW LIST STARTS HERE
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
+            
 
         <div class="container marketing">
 
             <!-- Three columns of text below the carousel -->
-            <h3>TRENDING NOW</h3>
+            <h3>TOP SEARCHES TRENDING NOW</h3>
+        
             <div class="row">
             <div class="col-lg-4">
                 <p id='key-term-1'></p>
@@ -167,15 +180,15 @@
                 <p id='key-term-18'></p>
                 
             </div><!-- /.col-lg-4 -->
+    
 
             </div><!-- /.row -->
-
 
             <!-- START THE TOP 10 GIFs -->
 
             <hr class="featurette-divider">
 
-            <h3 id="top-ten-heading">TOP 10 GIFs TRENDING NOW</h3>
+            <h3 id="top-ten-heading">TOP 10 GIFs COUNTDOWN</h3>
 
             <div class="row featurette">
             <div class="col-md-7">
@@ -301,9 +314,15 @@
             <img  class="giflist"  id="gif1" />
 
         </div>
+
     </div>
 
     <hr class="featurette-divider">
+
+    <p class="float-end"><img  id="giphy-logo" src="./images/Static Logos/Small/Light Backgrounds/PoweredBy_200px-White_HorizText.png" alt="Giphy Logo"></p>
+        
+  
+
 
         <!-- /END TOP 10 GIFs-->
 
@@ -313,8 +332,10 @@
 
         <!-- FOOTER -->
         <footer class="container">
-            <p class="float-end"><a href="#">Back to top</a></p>
-            <p>&copy; 2021 Tasha L. Egbuna &middot; <a href="#">Powered by GIPHY</a> 
+            <p class="float-end"><a href="#">Back to top</a>
+        
+        </html></p>
+            <p> Copyright &copy;2021 &middot; GIFs|4|Today, Inc.
         </footer>
 
     </main>
