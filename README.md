@@ -1,27 +1,25 @@
 ___
 
-# GIFs4Today
+# GIFs|4|Today
 ___
 
-**Description:**
+**DESCRIPTION:**
 This is an app that will allow users to view a list of the current, most popular GIFs being searched, see the top 10 most viewed GIFs in real time and search for for GIFs related to key-words they provide. 
 
-**Technologies:**
-
-* **GIPHY API**
+**TECHNOLOGIES:**
+* **Giphy API**
 * **GitHub**
 * **AJAX**
 **JavaScript**
 * ***HTML 5**
 * **CSS**
-* **FLEX BOX**
-* **CSS GRID**
-* **BOOTSTRAP**
+* **CSS Flex**
+* **CSS Grid**
+* **Bootstrap**
 * **jQuery**
 
 
-**Features:** 
-
+**FEATURES:** 
 * **Top Trends** - Populates a list of current popular key-words being searched. In the future, each key-term will be an active link that will allow users to search using their selection.
 * **Top 10 Gifs** - Displays the most popularly viewed GIFs of the moment counting down from 10 to 1.  
 * **Search GIPHY.com** - *As of right now, this fuction is being worked on so it's currently unavailable.* In the future, users will be able to search the library of GIFs hosted by the Giphy API using key-words of their choice.
