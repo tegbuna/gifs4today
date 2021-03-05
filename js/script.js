@@ -59,8 +59,8 @@ function formatList(e) {
 
 /*----- CONSTANTS -----*/ 
           const api = 'https://api.giphy.com/v1/gifs/search?q=';
-          const key = '&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0';
-          const userInput = $('.form-control me-2');
+          const key = '&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0&Limit=1';
+          const userInput = $('.form-control me-2').val();
           //const limit = '&limit=5';
 
          // Create new variable called queryURL which pieces together all of the above variables. 
@@ -72,8 +72,7 @@ function formatList(e) {
 
         // For simplicity, we will take the first gif (ie. at postion 0)
             const giphyURL = data3.data[0].images.original.url;
-           
-
+        
         // Plug image into modal.
             /*----- EVENT LISTENERS -----*/
         $('.btn-outline-success').click(function() {         
