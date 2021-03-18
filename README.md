@@ -26,6 +26,8 @@ This is an app that will allow users to view a list of the current, most popular
 
 **LINKS:**
 
+* **Screenshots**: Gifs4Today | [Imgur](https://i.imgur.com/hD1twxI.png) [Imgur](https://i.imgur.com/zPlnPIp.png)
+
 * **Live Site**: Vercel | https://gifs4today.vercel.app/
 
 * **GitHub Repository**: Gifs4Today | https://github.com/tegbuna/gifs4today
