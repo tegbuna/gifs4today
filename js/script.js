@@ -58,30 +58,12 @@ function formatList(e) {
 //For Search Items (needs modal):
 
 /*----- CONSTANTS -----*/ 
-          const api = 'https://api.giphy.com/v1/gifs/search?q=';
-          const key = '&api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0&Limit=1';
-          const userInput = $('.form-control me-2').val();
-          //const limit = '&limit=5';
+        const userInput = $('#gifsearch').val();
 
-         // Create new variable called queryURL which pieces together all of the above variables. 
-          const queryURL = api + userInput + key;
-
-           //Use AJAX to call GIPHY API:
-          $.ajax({url: queryURL, method: 'GET'}).then(function(data3){
-
-
-        // For simplicity, we will take the first gif (ie. at postion 0)
-            const giphyURL = data3.data[0].images.original.url;
-        
-        // Plug image into modal.
-            /*----- EVENT LISTENERS -----*/
-        $('.btn-outline-success').click(function() {         
-            $('.bg-modal').css('display', 'flex');
-            $('#mdal-gif').attr('src', giphyURL);
-        });
-        
-        $('.close').click(function() {
-            $('.bigm-odal').css('display', 'none')      
-        });
-    });
+ //Use AJAX to call GIPHY API:
+    $('#searchgifs').on('click', function() { 
+            $.ajax('https://api.giphy.com/v1/gifs/search?q=' + userInput + 'api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0', method='get').then (function(response) {
+                $('#gifsearch').html("<img src=" + response.data[0].images.downsized_large.url + ">")
+                })
+              });
     }
