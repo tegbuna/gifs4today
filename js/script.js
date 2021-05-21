@@ -55,15 +55,47 @@ function formatList(e) {
         $('#gif1').attr('src', data2.data[9].images.original.url);
     })
 
-//For Search Items (needs modal):
+//For Search Items:
+    const searchForm = document.getElementById('search-form')
+    const searchInput = document.getElementById('gifsearch')
+    const resultsEl = document.getElementById('results')
 
-/*----- CONSTANTS -----*/ 
-        const userInput = $('#gifsearch').val();
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault()
+        const q = searchInput.value 
+        search(q)
+    })
 
- //Use AJAX to call GIPHY API:
-    $('#searchgifs').on('click', function() { 
-            $.ajax('https://api.giphy.com/v1/gifs/search?q=' + userInput + 'api_key=TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0', method='get').then (function(response) {
-                $('#gifsearch').html("<img src=" + response.data[0].images.downsized_large.url + ">")
-                })
-              });
+    function search (q) {
+        const apikey = 'TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0'
+        const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}&limit3`
+
+        fetch(path).then(function(res) {
+            return res.json()
+        }).then(function(json) {
+            console.log(json.data[0].images.fixed_width.url)
+            $('#srch1').attr('src', json.data[0].images.original.url);
+            let resultsHTML = ''
+
+            json.data.forEach(function(obj) {
+            
+
+                const url = obj.images.fixed_width.url
+                const width = obj.images.fixed_width.width 
+                const height = obj.images.fixed_width.height
+                const title = obj.title
+
+                reusultsHTML += `<img
+                src="${url}"
+                width="${width}"
+                height="${height}"
+                alt="${title}"
+                >`
+            })
+
+            resultsEl.innerHTML = resultsHTML 
+        }).catch(function (err) {
+            // console.log(err.message);
+        })
     }
+}
