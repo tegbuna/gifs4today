@@ -17,7 +17,8 @@
 /*----- FUNCTIONS -----*/
 
 //Get Popular Search Key Terms List:
-$(document).ready(formatList);
+
+$(document).ready(formatList); 
 function formatList(e) {
 
     $.ajax('https://api.giphy.com/v1/trending/searches?api_key=ca1ep15FwAhmLD1t2cAUus1ubyOp2IsS&limit=27').then(function(data1){
@@ -40,6 +41,12 @@ function formatList(e) {
         $('#key-term-17').text(data1.data[16])
         $('#key-term-18').text(data1.data[17])
     })
+
+// Hide Search Results Heading:
+    // $(document).ready(function(){
+        //   $("#hidesearch").hide();
+    // })
+
 // Get Top 10 GIFs of the day:
 
     $.ajax('https://api.giphy.com/v1/gifs/trending?api_key=qb1xRZmU2B2eMGsiO78pCPnk1XOM0Rgx&limit=10').then (function(data2){
@@ -55,47 +62,67 @@ function formatList(e) {
         $('#gif1').attr('src', data2.data[9].images.original.url);
     })
 
-//For Search Items:
-    const searchForm = document.getElementById('search-form')
-    const searchInput = document.getElementById('gifsearch')
-    const resultsEl = document.getElementById('results')
+// Get Search Results:
+const apikey = 'TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0';
+const q = $('#search-input');
+const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
+const submit  = $('#submit-button');
 
-    searchForm.addEventListener('submit', function(e) {
-        e.preventDefault()
-        const q = searchInput.value 
-        search(q)
-    })
+$.ajax({
+    url:`${path}`
+}).then(  
+    (data3) => {
+        // $("#searchgifs").click((json) => {
+        // $("#hidesearch").show();
+        
+        $('$srch1').attr('src', data[0].images.original.url);
+    },
+(error) => {
+    console.log('bad request:', error);
+})
 
-    function search (q) {
-        const apikey = 'TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0'
-        const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}&limit3`
-
-        fetch(path).then(function(res) {
-            return res.json()
-        }).then(function(json) {
-            console.log(json.data[0].images.fixed_width.url)
-            $('#srch1').attr('src', json.data[0].images.original.url);
-            let resultsHTML = ''
-
-            json.data.forEach(function(obj) {
-            
-
-                const url = obj.images.fixed_width.url
-                const width = obj.images.fixed_width.width 
-                const height = obj.images.fixed_width.height
-                const title = obj.title
-
-                reusultsHTML += `<img
-                src="${url}"
-                width="${width}"
-                height="${height}"
-                alt="${title}"
-                >`
-            })
-
-            resultsEl.innerHTML = resultsHTML 
-        }).catch(function (err) {
-            // console.log(err.message);
-        })
-    }
+// })
 }
+
+
+
+
+
+
+
+
+// ***************
+// //For Search Items:
+//     // const searchForm = document.getElementById('search-form')
+//     // const searchInput = document.getElementById('gifsearch')
+//     // const resultsEl = document.getElementById('results')
+
+//     // searchForm.addEventListener('submit', function(e) {
+//     //     e.preventDefault()
+//     //     const q = searchInput.value 
+//     //     search(q)
+//     // })
+
+//     function search (q) {
+//         const apikey = 'TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0'
+//         const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`
+        
+
+//         fetch(path).then(function(res) {
+//             return res.json()
+//         }).then(function() {
+//             $("#searchgifs").click(function(json){
+//                 $("#hidesearch").show();
+//                 $('#srch1').attr('src', json.data[0].images.original.url);
+//                 $('#srch1').attr('src', data[1].images.original.url);
+//                 $('#srch1').attr('src', data[2].images.original.url);
+//             // console.log(json.data[0].images.fixed_width.url);
+//             // console.log(json.data[1].images.fixed_width.url);
+//             // console.log(json.data[2].images.fixed_width.url);
+
+//             // json.data.forEach(function(obj) {
+//             })
+//         })
+//         }
+        
+//     }
