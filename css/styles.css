@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Montserrat:wght@200;500&display=swap');
+
+.col-md-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #outline {
     /* font-family: 'Bungee Outline', cursive; */
     /* font-family: 'Londrina Outline', cursive; */
     color: rgba(11, 94, 218, 0.611);
+}
 
+.heading-topics {
+    color: black;
+    font-weight: bolder;
 }
 
 .text-muted {
@@ -15,7 +25,7 @@
 
 .navbar-brand{
     font-family: 'Reggae One', cursive;
-    font-size: 34px;
+    font-size: 29px;
 }
 
 /* .modal {
@@ -66,8 +76,8 @@
 }
 
  .giflist {
-     max-width: 300px;
-     max-height:300px;
+     max-width: 900px;
+     max-height:900px;
  }
 
  h3 {
@@ -77,14 +87,22 @@
  }
 
  .col-lg-4 {
+
      text-transform: capitalize;
      display: grid;
      grid-template-columns: 1fr 1fr 1 fr;
      justify-content: center;
      align-content: center; 
+     font-family: 'Montserrat', sans-serif;
+     /* color: rgb(11, 94, 218); */
+     /* color: rgb(119, 119, 119); */
+     color: rgba(11, 94, 218, 0.814);
+     font-size: 18px;
+     /* font-weight: 200; */
  }
 
  .featurette-heading {
-     font-size: 60px;
+    font-family: Montserrat, sans-serif;
+    font-size: 60px;
  }
 
