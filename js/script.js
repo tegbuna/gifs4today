@@ -18,6 +18,7 @@
 
 //Get Popular Search Key Terms List:
 
+
 $(document).ready(formatList); 
 function formatList(e) {
 
@@ -44,7 +45,7 @@ function formatList(e) {
 
 // Hide Search Results Heading:
     // $(document).ready(function(){
-        //   $("#hidesearch").hide();
+    //       $("#hidesearch").hide();
     // })
 
 // Get Top 10 GIFs of the day:
@@ -64,9 +65,10 @@ function formatList(e) {
 
 // Get Search Results:
 const apikey = 'TtNU4DZGqrYC7rkkWQckj4PC8tlwv2z0';
-const q = $('#search-input');
-const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
-const submit  = $('#submit-button');
+
+const q = $('#search-input').val();
+const path = `https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${apikey}&fmt=html`;
+// const submit  = ('#submit-button');
 
 $.ajax({
     url:`${path}`
@@ -75,7 +77,9 @@ $.ajax({
         // $("#searchgifs").click((json) => {
         // $("#hidesearch").show();
         
-        $('$srch1').attr('src', data[0].images.original.url);
+        $('#srch1').attr('src', data3.data[0].images.original.url);
+        $('#srch2').attr('src', data3.data[1].images.original.url);
+        $('#srch3').attr('src', data3.data[2].images.original.url);
     },
 (error) => {
     console.log('bad request:', error);

@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Londrina+Outline&display=swap');
+
+#outline {
+    /* font-family: 'Bungee Outline', cursive; */
+    /* font-family: 'Londrina Outline', cursive; */
+    color: rgba(11, 94, 218, 0.611);
+
+}
+
+.text-muted {
+    font-family: 'Londrina Outline', cursive;
+    font-size: 250px;
+    /* color: rgba(11, 94, 218, 0.611); */
+}
+
 .navbar-brand{
     font-family: 'Reggae One', cursive;
     font-size: 34px;
